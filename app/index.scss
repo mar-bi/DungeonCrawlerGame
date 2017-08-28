@@ -1,0 +1,150 @@
+// variables
+$bloodyred: red;
+$livegreen: #49db3e;
+$appwidth: 1024px;
+
+//mixins
+@mixin border($width, $bord-color, $radius:0) {
+	border: {
+		color: $bord-color;
+		width: $width;
+		style: solid;
+	};
+	border-radius: $radius;
+}
+
+//general style
+body {
+	background-color: lightgreen;
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 2em;
+	text-align: center;
+	margin: 10px 0;
+}
+
+h6 {
+	font-size: 1em;
+	text-align: center;
+	margin: 5px 0;
+	color: lighten(#000, 30%);
+}
+
+#app {
+	width: $appwidth;
+	margin: 0 auto;
+}
+
+.game-title {
+  font: 600 1.3em/1.2 'Rock Salt', cursive;
+	text-align: center;
+	color: $bloodyred;
+	text-shadow: 1px 3px 3px #000;
+	margin: 12px 0; 
+}
+
+.game-buttons {
+	width: 40%;
+	margin: 0 auto;
+	button {
+	  display: inline-block;
+		width: 43%;
+		margin: 0 5px;
+	}
+}
+
+.top-panel {
+	margin: 5px auto;
+}
+
+.control {
+	width: 12%;
+	display: inline-block;
+	margin: 0 10px;
+	h4.c-title {
+		font-size: 1em;
+		text-align: center;
+		margin: 0;
+	}
+	p.c-value {
+		text-align: center;
+		margin: 0;
+	}
+	button {
+		vertical-align: bottom;
+	}	
+}
+
+canvas {
+	display: block;
+	margin: 10px auto;
+	@include border(1px, #000);
+	background-color: #191919;
+}
+
+.game-over {
+	text-align: center;
+	color: $bloodyred;
+	font-weight: 600;
+	font-size: 1.1em;
+	margin: 5px 0;
+	height: 25px;
+}
+
+.bottom-panel {
+	@extend .top-panel;
+	width: 60%;
+}
+
+.sign {
+	display: inline-block;
+	margin-right: 1em;
+	h4 {
+		display: inline-block;
+		font-size: 1em;
+		margin: 5px 10px 5px 0;
+	}
+	div {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin-right: 5px;
+	}	
+}
+#b-player {
+	background-color: blue;
+}
+#b-enemy1{
+	background-color: #d45012;
+}
+#b-enemy2{
+	background-color: #d41235;
+}
+#b-enemy3{
+	background-color: #d41296;
+}
+#b-boss{
+	background-color: #ebe21b;
+}
+#b-weapon {
+	background-color: #d5a9f5;
+}
+#b-medicine {
+	background-color: #348d01;
+}
+#b-portal {
+	background-color: grey;
+}
+
+.game-rules{
+	margin: 5px 0;
+	text-align: center;
+	font-size: 0.95em;
+	font-style: italic;
+	font-weight: 600;
+	color: darken(#fff, 50%);
+}
+
