@@ -10,5 +10,5 @@
 
 The source code is in **App** folder.
 
-[Link to the game](https://mar-bi.github.io/DungeonCrawlerGame/).
+[Link to the game](https://guarded-shelf-25889.herokuapp.com/).
 
