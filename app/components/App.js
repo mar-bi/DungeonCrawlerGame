@@ -180,7 +180,7 @@ export class App extends React.Component {
 
 	resetGame(message){
 		const gameOver = false;
-		const dungeon = this.state.dungeon;
+		const dungeon = 1;
 		const new_map = getMap(dungeon);
 		const new_player = new player(this.state.boardWidth/2,
 		 	this.state.boardHeight/2, player_init.slice());
@@ -189,6 +189,7 @@ export class App extends React.Component {
 			data: new_map,
 			hero: new_player,
 			message: message,
+			dungeon: dungeon,
 			gameover: gameOver
 		});
 	}
